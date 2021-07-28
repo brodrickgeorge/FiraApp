@@ -1,12 +1,24 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Button } from "react-native";
 
 import { globalStyles } from "../styles/Global";
 
-export default function Register() {
+export default function Register({ navigation }) {
   return (
     <View style={globalStyles.centerItem}>
       <Text>I am the Register screen</Text>
+      <Button
+        title="Login"
+        onPress={() => {
+          navigation.navigate("Login");
+        }}
+      />
+      <Button
+        title="Home"
+        onPress={() => {
+          navigation.navigate("Home");
+        }}
+      />
     </View>
   );
 }

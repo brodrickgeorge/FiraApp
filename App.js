@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import * as Font from "expo-font";
 import AppLoading from "expo-app-loading";
 
-import Routes from "./src/Routes";
+import Providers from "./src/Providers";
 
 const getFonts = () =>
   Font.loadAsync({
@@ -14,7 +14,7 @@ export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
 
   if (fontsLoaded) {
-    return <Routes />;
+    return <Providers />;
   } else {
     return (
       <AppLoading
