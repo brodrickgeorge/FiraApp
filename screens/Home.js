@@ -5,6 +5,7 @@ import {
   SafeAreaView,
   FlatList,
   TouchableOpacity,
+  Button,
 } from "react-native";
 import { globalStyles } from "../styles/Global";
 
@@ -42,6 +43,18 @@ export default function Home({ navigation }) {
               <Text style={globalStyles.titleText}>{item.title}</Text>
             </TouchableOpacity>
           )}
+        />
+        <Button
+          title="Login"
+          onPress={() => {
+            navigation.navigate("Login");
+          }}
+        />
+        <Button
+          title="Register"
+          onPress={() => {
+            navigation.navigate("Register");
+          }}
         />
       </View>
     </SafeAreaView>
