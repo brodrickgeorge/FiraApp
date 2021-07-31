@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import { View, Text, StyleSheet, ActivityIndicator } from "react-native";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import { AsyncStorage } from "react-native";
 
 import Home from "../screens/Home";
 import Login from "../screens/Login";
