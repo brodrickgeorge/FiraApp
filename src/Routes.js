@@ -24,9 +24,11 @@ export default function Routes() {
         } else {
           setLoading(false);
         }
+        console.log(userString);
       })
       .catch((err) => {
         console.log(err);
+        setLoading(false);
       });
   }, []);
 
@@ -40,21 +42,27 @@ export default function Routes() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen
-          options={{
-            headerTitle: "FIRA",
-          }}
-          name="Home"
-          component={Home}
-        />
-        <Stack.Screen
-          name="Register"
-          options={{ header: () => null }}
-          component={Register}
-        />
-      </Stack.Navigator>
+      {user ? (
+        <View style={globalStyles.centerItem}>
+          <Text>you exist </Text>
+        </View>
+      ) : (
+        <Stack.Navigator initialRouteName="Home">
+          <Stack.Screen name="Login" component={Login} />
+          {/* <Stack.Screen
+            options={{
+              headerTitle: "FIRA",
+            }}
+            name="Home"
+            component={Home}
+          /> */}
+          <Stack.Screen
+            name="Register"
+            options={{ header: () => null }}
+            component={Register}
+          />
+        </Stack.Navigator>
+      )}
     </NavigationContainer>
   );
 }
