@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { View, Text, Button } from "react-native";
 
-import { AuthContext } from "../src/AuthProvider";
+import { AuthContext } from "../auth/AuthProvider";
 
 import { globalStyles } from "../styles/Global";
 
@@ -21,13 +21,6 @@ export default function Login({ navigation }) {
         title="Log me in"
         onPress={() => {
           login();
-        }}
-      />
-      <Button
-        color="coral"
-        title="Home"
-        onPress={() => {
-          navigation.navigate("Home");
         }}
       />
     </View>

@@ -16,6 +16,7 @@ export default function AuthProvider({ children }) {
           AsyncStorage.setItem("user", JSON.stringify(fakeUser));
         },
         logout: () => {
+          setUser(null);
           AsyncStorage.removeItem("user");
         },
       }}

@@ -13,12 +13,6 @@ export default function Register({ navigation }) {
           navigation.navigate("Login");
         }}
       />
-      <Button
-        title="Home"
-        onPress={() => {
-          navigation.navigate("Home");
-        }}
-      />
     </View>
   );
 }
