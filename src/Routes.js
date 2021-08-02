@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
-import { View, Text, StyleSheet, ActivityIndicator } from "react-native";
+import { View, Text, ActivityIndicator } from "react-native";
 import { AsyncStorage } from "react-native";
 
-import Home from "../screens/Home";
+// import Home from "../screens/Home";
 import Login from "../screens/Login";
 import Register from "../screens/Register";
 import { globalStyles } from "../styles/Global";
@@ -13,7 +13,7 @@ import { AuthContext } from "./AuthProvider";
 const Stack = createStackNavigator();
 
 export default function Routes() {
-  const { user } = useContext(AuthContext);
+  const { user, login } = useContext(AuthContext);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -21,14 +21,12 @@ export default function Routes() {
       .then((userString) => {
         if (userString) {
           //decode it
-        } else {
-          setLoading(false);
+          login();
         }
-        console.log(userString);
+        setLoading(false);
       })
       .catch((err) => {
         console.log(err);
-        setLoading(false);
       });
   }, []);
 
