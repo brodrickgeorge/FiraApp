@@ -23,13 +23,6 @@ export default function Login({ navigation }) {
           login();
         }}
       />
-      <Button
-        color="coral"
-        title="Home"
-        onPress={() => {
-          navigation.navigate("Home");
-        }}
-      />
     </View>
   );
 }

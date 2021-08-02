@@ -44,15 +44,12 @@ export default function Routes() {
       {user ? (
         <AppTabs />
       ) : (
-        <Stack.Navigator initialRouteName="Home">
-          <Stack.Screen name="Login" component={Login} />
-          {/* <Stack.Screen
-            options={{
-              headerTitle: "FIRA",
-            }}
-            name="Home"
-            component={Home}
-          /> */}
+        <Stack.Navigator initialRouteName="Login">
+          <Stack.Screen
+            options={{ header: () => null }}
+            name="Login"
+            component={Login}
+          />
           <Stack.Screen
             name="Register"
             options={{ header: () => null }}
