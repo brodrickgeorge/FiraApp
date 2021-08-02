@@ -8,7 +8,7 @@ import {
   Button,
 } from "react-native";
 
-import { AuthContext } from "../src/AuthProvider";
+import { AuthContext } from "../auth/AuthProvider";
 import { globalStyles } from "../styles/Global";
 
 export default function Home({ navigation }) {

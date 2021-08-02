@@ -1,17 +1,12 @@
 import React, { useState, useEffect, useContext } from "react";
-import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
-import { View, Text, ActivityIndicator } from "react-native";
+import { View, ActivityIndicator } from "react-native";
 import { AsyncStorage } from "react-native";
 
-// import Home from "../screens/Home";
-import Login from "../screens/Login";
-import Register from "../screens/Register";
 import { globalStyles } from "../styles/Global";
-import { AuthContext } from "./AuthProvider";
+import { AuthContext } from "../auth/AuthProvider";
 import AppTabs from "./AppTabs";
-
-const Stack = createStackNavigator();
+import AuthStack from "../auth/AuthStack";
 
 export default function Routes() {
   const { user, login } = useContext(AuthContext);
@@ -41,22 +36,7 @@ export default function Routes() {
 
   return (
     <NavigationContainer>
-      {user ? (
-        <AppTabs />
-      ) : (
-        <Stack.Navigator initialRouteName="Login">
-          <Stack.Screen
-            options={{ header: () => null }}
-            name="Login"
-            component={Login}
-          />
-          <Stack.Screen
-            name="Register"
-            options={{ header: () => null }}
-            component={Register}
-          />
-        </Stack.Navigator>
-      )}
+      {user ? <AppTabs /> : <AuthStack />}
     </NavigationContainer>
   );
 }
