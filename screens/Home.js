@@ -44,18 +44,6 @@ export default function Home({ navigation }) {
             </TouchableOpacity>
           )}
         />
-        <Button
-          title="Login"
-          onPress={() => {
-            navigation.navigate("Login");
-          }}
-        />
-        <Button
-          title="Register"
-          onPress={() => {
-            navigation.navigate("Register");
-          }}
-        />
       </View>
     </SafeAreaView>
   );

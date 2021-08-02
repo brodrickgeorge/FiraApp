@@ -9,6 +9,7 @@ import Login from "../screens/Login";
 import Register from "../screens/Register";
 import { globalStyles } from "../styles/Global";
 import { AuthContext } from "./AuthProvider";
+import AppTabs from "./AppTabs";
 
 const Stack = createStackNavigator();
 
@@ -41,9 +42,7 @@ export default function Routes() {
   return (
     <NavigationContainer>
       {user ? (
-        <View style={globalStyles.centerItem}>
-          <Text>you exist </Text>
-        </View>
+        <AppTabs />
       ) : (
         <Stack.Navigator initialRouteName="Home">
           <Stack.Screen name="Login" component={Login} />
