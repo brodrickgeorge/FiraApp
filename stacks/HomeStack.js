@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../auth/AuthProvider";
 import { Button } from "react-native";
-
 import { createStackNavigator } from "@react-navigation/stack";
+
 import Feed from "../screens/Feed";
+import ReviewDetails from "../screens/ReviewDetails";
 
 const Stack = createStackNavigator();
 
@@ -20,6 +21,13 @@ export default function HomeStack() {
             return <Button title="Logout" onPress={() => logout()} />;
           },
         }}
+      />
+      <Stack.Screen
+        options={({ route }) => ({
+          headerTitle: route.params.title,
+        })}
+        name="ReviewDetails"
+        component={ReviewDetails}
       />
     </Stack.Navigator>
   );
