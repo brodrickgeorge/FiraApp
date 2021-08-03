@@ -1,19 +1,16 @@
 import React, { useState, useContext } from "react";
+
 import {
   View,
   Text,
   SafeAreaView,
   FlatList,
   TouchableOpacity,
-  Button,
 } from "react-native";
 
-import { AuthContext } from "../auth/AuthProvider";
 import { globalStyles } from "../styles/Global";
 
-export default function Home({ navigation }) {
-  const { logout } = useContext(AuthContext);
-
+export default function Feed({ navigation }) {
   const [reviews, setReviews] = useState([
     {
       title: "Zelda, Breath of Fresh Air",
@@ -48,7 +45,6 @@ export default function Home({ navigation }) {
             </TouchableOpacity>
           )}
         />
-        <Button title="Logout" onPress={() => logout()} />
       </View>
     </SafeAreaView>
   );

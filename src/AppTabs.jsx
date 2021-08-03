@@ -2,7 +2,7 @@ import React from "react";
 import { AntDesign } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import Home from "../screens/Home";
+import HomeStack from "../stacks/HomeStack";
 import Search from "../screens/Search";
 
 const Tabs = createBottomTabNavigator();
@@ -11,7 +11,7 @@ export default function AppTabs() {
   return (
     <Tabs.Navigator
       screenOptions={({ route }) => ({
-        tabBarIcon: ({ focused, color, size }) => {
+        tabBarIcon: ({ color, size }) => {
           let iconName;
 
           if (route.name === "Home") {
@@ -27,7 +27,7 @@ export default function AppTabs() {
         tabBarInactiveTintColor: "gray",
       })}
     >
-      <Tabs.Screen name="Home" component={Home} />
+      <Tabs.Screen name="Home" component={HomeStack} />
       <Tabs.Screen name="Search" component={Search} />
     </Tabs.Navigator>
   );
