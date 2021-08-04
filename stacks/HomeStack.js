@@ -32,7 +32,16 @@ export default function HomeStack() {
       />
       <Stack.Screen
         options={({ route }) => ({
-          headerTitle:`Edit:  ${route.params.title}`,
+          headerTitle: `Edit:  ${route.params.title}`,
+          headerRight: () => (
+            <Button
+              color="green"
+              title="Done"
+              onPress={() => {
+                //Submit
+              }}
+            />
+          ),
         })}
         name="Edit"
         component={Edit}
