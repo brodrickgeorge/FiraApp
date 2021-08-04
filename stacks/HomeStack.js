@@ -5,6 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import Feed from "../screens/Feed";
 import ReviewDetails from "../screens/ReviewDetails";
+import Edit from "../screens/Edit";
 
 const Stack = createStackNavigator();
 
@@ -28,6 +29,13 @@ export default function HomeStack() {
         })}
         name="ReviewDetails"
         component={ReviewDetails}
+      />
+      <Stack.Screen
+        options={({ route }) => ({
+          headerTitle:`Edit:  ${route.params.title}`,
+        })}
+        name="Edit"
+        component={Edit}
       />
     </Stack.Navigator>
   );
