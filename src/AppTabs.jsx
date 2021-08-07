@@ -3,7 +3,7 @@ import { AntDesign } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import HomeStack from "../stacks/HomeStack";
-import Search from "../screens/Search";
+import SearchStack from "../stacks/SearchStack";
 
 const Tabs = createBottomTabNavigator();
 
@@ -28,7 +28,7 @@ export default function AppTabs() {
       })}
     >
       <Tabs.Screen name="Home" component={HomeStack} />
-      <Tabs.Screen name="Search" component={Search} />
+      <Tabs.Screen name="Search" component={SearchStack} />
     </Tabs.Navigator>
   );
 }
