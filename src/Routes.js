@@ -7,6 +7,7 @@ import { globalStyles } from "../styles/Global";
 import { AuthContext } from "../auth/AuthProvider";
 import AppTabs from "./AppTabs";
 import AuthStack from "../auth/AuthStack";
+import AppDrawer from "./AppDrawer";
 
 export default function Routes() {
   const { user, login } = useContext(AuthContext);
@@ -36,7 +37,7 @@ export default function Routes() {
 
   return (
     <NavigationContainer>
-      {user ? <AppTabs /> : <AuthStack />}
+      {user ? <AppTabs /> : <AuthStack /> }
     </NavigationContainer>
   );
 }
