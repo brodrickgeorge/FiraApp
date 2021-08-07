@@ -1,12 +1,11 @@
 import React from "react";
 import { View, Text, Button } from "react-native";
-import { SafeAreaView } from "react-navigation";
 
 import { globalStyles } from "../styles/Global";
 
 export default function ReviewDetails({ route, navigation }) {
   return (
-    <SafeAreaView style={globalStyles.containerSA}>
+    <View style={globalStyles.containerSA}>
       <View style={globalStyles.container}>
         <Text style={globalStyles.titleText}>{route.params.title}</Text>
         <Text style={globalStyles.titleText}>{route.params.body}</Text>
@@ -19,6 +18,6 @@ export default function ReviewDetails({ route, navigation }) {
           navigation.navigate("Edit", { title: route.params.title })
         }
       />
-    </SafeAreaView>
+    </View>
   );
 }

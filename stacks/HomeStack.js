@@ -4,8 +4,7 @@ import { Button } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import Feed from "../screens/Feed";
-import ReviewDetails from "../screens/ReviewDetails";
-import Edit from "../screens/Edit";
+import { addAnimeRoutes } from "../src/addAnimeRoutes";
 
 const Stack = createStackNavigator();
 
@@ -13,7 +12,8 @@ export default function HomeStack() {
   const { logout } = useContext(AuthContext);
 
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName="Feed">
+      {addAnimeRoutes(Stack)}
       <Stack.Screen
         name="Feed"
         component={Feed}
@@ -22,30 +22,6 @@ export default function HomeStack() {
             return <Button title="Logout" onPress={() => logout()} />;
           },
         }}
-      />
-      <Stack.Screen
-        options={({ route }) => ({
-          headerTitle: route.params.title,
-        })}
-        name="ReviewDetails"
-        component={ReviewDetails}
-      />
-      <Stack.Screen
-        options={({ route }) => ({
-          headerTitle: `Edit:  ${route.params.title}`,
-          headerRight: () => (
-            <Button
-              color="green"
-              title="Done"
-              onPress={() => {
-                //Submit
-                route.params.submit?.current();
-              }}
-            />
-          ),
-        })}
-        name="Edit"
-        component={Edit}
       />
     </Stack.Navigator>
   );
