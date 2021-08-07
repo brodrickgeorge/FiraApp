@@ -39,6 +39,7 @@ export default function HomeStack() {
               title="Done"
               onPress={() => {
                 //Submit
+                route.params.submit?.current();
               }}
             />
           ),
