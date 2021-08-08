@@ -1,18 +1,20 @@
 import React from "react";
-import { View, Text, Button } from "react-native";
+import { View, Text, Button, SafeAreaView } from "react-native";
 
 import { globalStyles } from "../styles/Global";
 
 export default function Register({ navigation }) {
   return (
-    <View style={globalStyles.centerItem}>
-      <Text>I am the Register screen</Text>
-      <Button
-        title="Login"
-        onPress={() => {
-          navigation.navigate("Login");
-        }}
-      />
-    </View>
+    <SafeAreaView style={globalStyles.containerSA}>
+      <View style={globalStyles.centerItem}>
+        <Text>I am the Register screen</Text>
+        <Button
+          title="Login"
+          onPress={() => {
+            navigation.navigate("Login");
+          }}
+        />
+      </View>
+    </SafeAreaView>
   );
 }

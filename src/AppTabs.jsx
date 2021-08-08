@@ -40,20 +40,7 @@ export default function AppTabs() {
     >
       <Tabs.Screen name="Home" component={HomeStack} />
       <Tabs.Screen name="Search" component={SearchStack} />
-      <Tabs.Screen
-        name="Profile"
-        component={ProfileStack}
-        // options={{
-        //   tabBarLabel: "Profile",
-        //   tabBarIcon: () => (
-        //     <MaterialCommunityIcons
-        //       name="account-outline"
-        //       size={30}
-        //       color="black"
-        //     />
-        //   ),
-        // }}
-      />
+      <Tabs.Screen name="Profile" component={ProfileStack} />
     </Tabs.Navigator>
   );
 }
