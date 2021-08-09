@@ -19,7 +19,6 @@ export const globalStyles = StyleSheet.create({
   },
   centerItem: {
     flex: 1,
-    
   },
   image: {
     flex: 1,
