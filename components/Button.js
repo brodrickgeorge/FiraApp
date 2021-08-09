@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
-import colors from "../styles/colors";
+import colors from "../config/colors";
 
 function AppButton({ title, onPress, color = "yellow" }) {
   return (
