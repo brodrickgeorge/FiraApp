@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "101857123663",
+    "project_id": "firaapp-dde85",
+    "storage_bucket": "firaapp-dde85.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:101857123663:android:09905f61eb7315d827b93a",
+        "android_client_info": {
+          "package_name": "com.brodrickgeorge.FiraApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "101857123663-nlcmlh81spp0lv7uj9heb5o2dt52jok7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzxokm1AYEXPYMG3A1tF376wODJNuOhdI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "101857123663-nlcmlh81spp0lv7uj9heb5o2dt52jok7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
