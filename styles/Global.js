@@ -19,7 +19,10 @@ export const globalStyles = StyleSheet.create({
   },
   centerItem: {
     flex: 1,
-    alignItems: "center",
+  },
+  image: {
+    flex: 1,
     justifyContent: "center",
+    resizeMode: "cover",
   },
 });

@@ -6,6 +6,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeStack from "../stacks/HomeStack";
 import SearchStack from "../stacks/SearchStack";
 import ProfileStack from "../stacks/ProfileStack";
+import colors from "../config/colors";
 
 const Tabs = createBottomTabNavigator();
 
@@ -35,25 +36,15 @@ export default function AppTabs() {
       })}
       tabBarOptions={{
         activeTintColor: "tomato",
-        inactiveTintColor: "gray",
+        inactiveTintColor: "white",
+        style: {
+          backgroundColor: colors.yellow
+        },
       }}
     >
-      <Tabs.Screen name="Home" component={HomeStack} />
+      <Tabs.Screen name="Home" component={HomeStack} options={{ header: () => null }} />
       <Tabs.Screen name="Search" component={SearchStack} />
-      <Tabs.Screen
-        name="Profile"
-        component={ProfileStack}
-        // options={{
-        //   tabBarLabel: "Profile",
-        //   tabBarIcon: () => (
-        //     <MaterialCommunityIcons
-        //       name="account-outline"
-        //       size={30}
-        //       color="black"
-        //     />
-        //   ),
-        // }}
-      />
+      <Tabs.Screen name="Profile" component={ProfileStack} />
     </Tabs.Navigator>
   );
 }
