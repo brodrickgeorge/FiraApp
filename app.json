@@ -17,15 +17,13 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.brodrickgeorge.FiraApp"
+      "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      },
-      "package": "com.brodrickgeorge.FiraApp"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
